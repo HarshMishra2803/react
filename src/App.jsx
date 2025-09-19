@@ -1,11 +1,19 @@
 import React from "react";
 import { state, useState } from "react";
+import { useEffect } from "react";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Card from "./components/card";
+import Useeffect from "./components/useeffect";
 
 const App = () => {
   const [count, setCount] = useState(0);
+
+  // useEffect(() => {
+  //   alert("hey wlecome to my page");
+  // }, [])
+  
+  
   return (
     <>
       <Navbar />
@@ -18,6 +26,9 @@ const App = () => {
         
       </div>
       <Footer />
+      <Useeffect color ="red"/>
+
+
     </>
     // hooks and state in react
   );
