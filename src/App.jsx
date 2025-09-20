@@ -9,6 +9,29 @@ import Useeffect from "./components/useeffect";
 const App = () => {
   const [count, setCount] = useState(0);
 
+  const [todo , SetTodo] = React.useState([
+        {
+          title : "first todo",
+          desc : "this is the first todo"
+        },
+        {
+          title : "second todo",
+          desc : "this is the second todo"
+        },
+        {
+          title : "third todo",
+          desc : "this is the third todo"
+        }
+      ])
+      const Todo =({todo})=>{
+        return(
+            <>
+            <div className="todo">{todo.title}</div>
+            <div className="todo">{todo.desc}</div>
+            </>
+        )
+    }
+
   // useEffect(() => {
   //   alert("hey wlecome to my page");
   // }, [])
@@ -16,6 +39,12 @@ const App = () => {
   
   return (
     <>
+
+    {todo.map((todo)=>(
+      <Todo todo={todo} />
+    ))}
+
+
       <Navbar />
 
       <div className="cards">
