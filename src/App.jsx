@@ -7,11 +7,35 @@ import Card from "./components/card";
 import Useeffect from "./components/useeffect";
 
 const App = () => {
+  const [cards, setcards] = useState([])
+
+  useEffect(() => {
+    first
+  
+    return () => {
+      second
+    }
+  }, [])
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // const [count, setCount] = useState(0);
-  const [form, setForm] = useState({
-    email : "",
-    phone : ""
-  })
+  // const [form, setForm] = useState({
+  //   email : "",
+  //   phone : ""
+  // })
 
   // const [todo , SetTodo] = React.useState([
   //       {
@@ -40,25 +64,23 @@ const App = () => {
   //   alert("hey wlecome to my page");
   // }, [])
 
-  const handlechange =(e)=>{
-    setForm({
-      ...form,
-      [e.target.name] : e.target.value,
+  // const handlechange =(e)=>{
+  //   setForm({
+  //     ...form,
+  //     [e.target.name] : e.target.value,
 
-    })
-    console.log(form);
-  }
-  
-  
+  //   })
+  //   console.log(form);
+  // }
+
   return (
     <>
-
-    {/* {todo.map((todo)=>(
+     <Navbar/>
+      {/* {todo.map((todo)=>(
       <Todo todo={todo} />
     ))} */}
 
-
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* <div className="cards">
         <Card title="card1"  description ="THis is the description of the card1"/>
@@ -68,16 +90,12 @@ const App = () => {
         
       </div> */}
 
-      <input type="text" name="email" value={form.email}  onChange={handlechange}/>
+      {/* <input type="text" name="email" value={form.email}  onChange={handlechange}/>
       <input type="text" name="phone" value={form.phone}  onChange={handlechange}/>
+ */}
 
-
-
-
-      <Footer />
+      {/* <Footer /> */}
       {/* <Useeffect color ="red"/> */}
-
-
     </>
     // hooks and state in react
   );
