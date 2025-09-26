@@ -10,6 +10,7 @@ const App = () => {
   const [cards, setcards] = useState([])
   const [count, setcount] = useState(0)
   const [name, setname] = useState("")
+  const [show, setshow] = useState(true)
 
   useEffect(() => {
     first
