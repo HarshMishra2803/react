@@ -9,6 +9,7 @@ import Useeffect from "./components/useeffect";
 const App = () => {
   const [cards, setcards] = useState([])
   const [count, setcount] = useState(0)
+  const [name, setname] = useState("")
 
   useEffect(() => {
     first
