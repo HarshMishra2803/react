@@ -7,31 +7,19 @@ import Card from "./components/card";
 import Useeffect from "./components/useeffect";
 
 const App = () => {
-  const [cards, setcards] = useState([])
-  const [count, setcount] = useState(0)
-  const [name, setname] = useState("")
-  const [show, setshow] = useState(true)
+  const [cards, setcards] = useState([]);
+
+  const fetchdata = async () => {
+    let a = await fetch("https://jsonplaceholder.typicode.com/posts");
+    let data = await a.json();
+    setcards(data);
+    console.log(data);
+  }
 
   useEffect(() => {
-    first
-  
-    return () => {
-      second
-    }
+    fetchdata();
   }, [])
   
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   // const [count, setCount] = useState(0);
@@ -78,7 +66,22 @@ const App = () => {
 
   return (
     <>
-     <Navbar/>
+      <div className="containor">
+        {cards.map((card)=>{
+          return(
+            <div key = {card.id}className="card">
+              <h1>{card.title}</h1>
+              <p>{card.body}</p>
+              <span>by userid:{card.userId}</span>
+            </div>
+          )
+        })}
+      </div>
+
+
+
+
+
       {/* {todo.map((todo)=>(
       <Todo todo={todo} />
     ))} */}
